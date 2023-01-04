@@ -6,8 +6,8 @@ from torchvision import transforms as trans
 
 def get_config(training = True):
     conf = edict()
-    conf.data_path = Path('bfc_data')
-    conf.save_path = '/home/coreprinciple/work_station/ML_project/FR/face_recognition/save'
+    conf.data_path = Path('dataset')
+    conf.save_path = 'save'
     conf.input_size = [112,112]
     conf.embedding_size = 512
     conf.use_mobilfacenet = False
@@ -26,7 +26,7 @@ def get_config(training = True):
 #--------------------Training Config ------------------------    
     if training:        
         conf.log_path = 'log'
-        conf.save_path = '/home/coreprinciple/work_station/ML_project/FR/face_recognition/save'
+        conf.save_path = 'save'
         conf.lr = 1e-3
         conf.momentum = 0.9
         conf.milestones = [12,15,18]

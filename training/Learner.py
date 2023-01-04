@@ -19,7 +19,7 @@ class face_learner(object):
         print(conf)
         self.model = Backbone(conf.net_depth, conf.drop_ratio, conf.net_mode).to(conf.device)
         print('{}_{} model generated'.format(conf.net_mode, conf.net_depth))
-        self.bfc_img_path = '/home/coreprinciple/work_station/ML_project/FR/face_recognition/bfc_data'
+        self.bfc_img_path = '/home/data'
         if not inference:
             self.milestones = conf.milestones
             self.loader, self.class_num = get_train_loader(conf)        
